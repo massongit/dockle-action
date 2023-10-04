@@ -7,13 +7,13 @@ while getopts ":t:c:l:o:f:" o; do
     export imageName=${OPTARG}
     ;;
   c)
-    export exitCode="$(echo "${OPTARG}")"
+    export exitCode="$(echo "${OPTARG}" | sed 's/^ *\| *$//')"
     ;;
   l)
     export exitLevel=${OPTARG}
     ;;
   o)
-    export output="$(echo "${OPTARG}")"
+    export output="$(echo "${OPTARG}" | sed 's/^ *\| *$//')"
     ;;
   f)
     export format=${OPTARG}
