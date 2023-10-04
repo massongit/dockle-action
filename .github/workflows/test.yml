@@ -14,5 +14,5 @@ jobs:
       - name: Run dockle (dss-postgres)
         uses: ./
         with:
-          image: 'ubuntus:latest'
+          image: 'ubuntu:latest'
           exit-level: 'info'
