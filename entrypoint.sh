@@ -25,7 +25,7 @@ while getopts ":t:c:l:o:f:" o; do
 done
 
 function run_dockle() {
-  /usr/bin/dockle $@ $imageName
+  /usr/bin/dockle --debug $@ $imageName
 }
 
 FIRST_ARGS=""
